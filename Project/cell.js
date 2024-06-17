@@ -129,8 +129,8 @@ class QuestionScreen {
         if ([ 2, 8, 9, 12, 13, 21, 22, 26, 32, 34, 42, 45, 47, 48, 50, 57].includes(this.index)) {
           fill(255, 0, 0);
           textSize(60);
-          text('랜덤', 500, 130); // 리퍼 이미지 왼쪽
-          text('질문', 980, 130); // 리퍼 이미지 오른쪽
+          text('랜덤',playScreen_w/2-180, 130); // 리퍼 이미지 왼쪽
+          text('질문', playScreen_w/2+300, 130); // 리퍼 이미지 오른쪽
         }
       // 텍스트 그리기 (질문)
       textFont(customFont, 29); // 텍스트 폰트 및 크기 설정
@@ -187,8 +187,8 @@ class QuestionScreen {
       if ([2, 8, 9, 12, 13, 21, 22, 26, 32, 34, 42, 45, 47, 48, 50, 57].includes(this.index)) {
         fill(255, 0, 0);
         textSize(60);
-        text('랜덤', 500, 110); // 리퍼 이미지 왼쪽
-        text('질문', 1050, 110); // 리퍼 이미지 오른쪽
+        text('랜덤', playScreen_w/2-300, 110); // 리퍼 이미지 왼쪽
+        text('질문', playScreen_w/2+200, 110); // 리퍼 이미지 오른쪽
       }
       // 텍스트 그리기 (질문)
       textFont(customFont, 29); // 텍스트 폰트 및 크기 설정
