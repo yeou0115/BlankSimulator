@@ -27,7 +27,7 @@ let probabilityCheck66 = undefined;
 let probabilityCheck67 = undefined;
 
 ////////////////////////////////////////////////////
-let mode = 90; //화면 전환
+let mode = 0; //화면 전환
 let inputBox;
 let inputActive = true;
 let player  //player 선언
@@ -510,7 +510,7 @@ function draw() {
       break;
     case 30:
 
-        createQuestionScreen(20);
+      createQuestionScreen(20);
 
       break;
     case 38:
@@ -614,8 +614,8 @@ function draw() {
       createQuestionScreen(55);
       break;
     case 66:
-  
-        createQuestionScreen(56);
+
+      createQuestionScreen(56);
 
       break;
     case 67:
@@ -644,13 +644,13 @@ function draw() {
     case 90:
       // 문장 배열
       let sentences = [
-        player.name + "의 시뮬레이터는 여기까지야.\n수고했어.","인생을 처음부터 끝까지 체험해보니 어때?",
-        "재밌다고 느낀 순간도 있고,\n질문이 너무 많아서 힘들었던 순간도 있었을 거야.", 
-        "하지만 인생은 수많은 선택의 연속이라고 하잖아? \n앞으로 너는 오늘 마주한 것보다 더 많고 어려운 선택의 순간들을 마주할 거야.", 
+        player.name + "의 시뮬레이터는 여기까지야.\n수고했어.", "인생을 처음부터 끝까지 체험해보니 어때?",
+        "재밌다고 느낀 순간도 있고,\n질문이 너무 많아서 힘들었던 순간도 있었을 거야.",
+        "하지만 인생은 수많은 선택의 연속이라고 하잖아? \n앞으로 너는 오늘 마주한 것보다 더 많고 어려운 선택의 순간들을 마주할 거야.",
         "오늘의 체험이 앞으로의 너에게 도움이 되길 바라.",
         "마지막으로 지금까지 너의 선택들을 정리해서 보여줄게. \n잘 읽어보고, 언젠가 다시 나를 만났을 때 너의 실제 삶은 어땠는지 이야기를 들려줘.",
-        " 언제일지 모르지만 그날을 기다리고 있을게.", 
-        "안녕, "+player.name
+        " 언제일지 모르지만 그날을 기다리고 있을게.",
+        "안녕, " + player.name
       ];
 
       // 애니메이션 보이기
@@ -678,7 +678,7 @@ function draw() {
           fill(244, 234, 224);
           textSize(32);
           textAlign(CENTER, TOP);
-          text(sentences[sentenceIndex], playScreen_w / 2, playScreen_h / 2 +40+ animationImages[animationIndex].height * 0.1);
+          text(sentences[sentenceIndex], playScreen_w / 2, playScreen_h / 2 + 40 + animationImages[animationIndex].height * 0.1);
         }
       }
       break;
@@ -792,7 +792,7 @@ function drawImageCenter(img, x, y, w) {  //이미지 비율 유지해서 좌표
 function drawCalendarOutline() { //희원 추가. 캘린더 그리기
   background(50);
   fill(0);
-  rect(0,0,playScreen_w,playScreen_h);
+  rect(0, 0, playScreen_w, playScreen_h);
   image(calendar_outline, 50, 30, 840, 870);
 
   let startX = 180;
@@ -1097,25 +1097,25 @@ function createQuestionScreen(index) {
 
 function mousePressed() {
   clickSound.play();
-  if(mode==27 || mode==28 || mode==33 || mode==34 || mode==39 || mode==40 || mode==42 || mode==45 || mode==46 || mode==47
-     || mode==49 || mode==50 || mode==52 || mode==54 || mode==57 || mode==62 || mode==67 || mode==69){
+  if (mode == 27 || mode == 28 || mode == 33 || mode == 34 || mode == 39 || mode == 40 || mode == 42 || mode == 45 || mode == 46 || mode == 47
+    || mode == 49 || mode == 50 || mode == 52 || mode == 54 || mode == 57 || mode == 62 || mode == 67 || mode == 69) {
     const index = mode - 10;
-    if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 600 && mouseY - playScreen_y < 650){
-      handleMouseClick(mode,0);
+    if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 600 && mouseY - playScreen_y < 650) {
+      handleMouseClick(mode, 0);
     }
 
-  }else if(mode ==24 || mode==56){
+  } else if (mode == 24 || mode == 56) {
     const index = mode - 10;
     if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 550 && mouseY - playScreen_y < 600) {
-      handleMouseClick(mode,0);
+      handleMouseClick(mode, 0);
     }
     if (mouseX - playScreen_x > 250 && mouseX - playScreen_x < 450 && mouseY - playScreen_y > 650 && mouseY - playScreen_y < 700) {
-      handleMouseClick(mode,1);
+      handleMouseClick(mode, 1);
     }
     if (mouseX - playScreen_x > 1000 && mouseX - playScreen_x < 1500 && mouseY - playScreen_y > 600 && mouseY - playScreen_y < 650) {
-      handleMouseClick(mode,2);
+      handleMouseClick(mode, 2);
     }
-  }else if (mode >= 10 && mode <= 69 && mode!==63 && mode!==16) {
+  } else if (mode >= 10 && mode <= 69 && mode !== 63 && mode !== 16) {
     const index = mode - 10;
     if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 600 && mouseY - playScreen_y < 650) {
       handleMouseClick(mode, 0);
@@ -1227,7 +1227,7 @@ function mousePressed() {
       if (mouseX - playScreen_x > x && mouseX - playScreen_x < x + 200 && mouseY - playScreen_y > y - 25 && mouseY - playScreen_y < y + 25) {
         selectedOptions.push(options[i][0]);
         applyChanges(options[i][1]); // 선택지에 대한 변수 영향 적용
-        handleMouseClick(mode,i);
+        handleMouseClick(mode, i);
         mode = 17;
         displayText = ""; // 질문 텍스트 초기화
         textIndex = 0;
@@ -1563,28 +1563,28 @@ function mousePressed() {
   else if (mode === 63) { // Index 53: answer_num = 4
     if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 550 && mouseY - playScreen_y < 600) {
       applyChanges(question_list[53].answer[0].slice(1)); // 첫 번째 선택지에 대한 변수 영향 적용
-      handleMouseClick(mode,0);
+      handleMouseClick(mode, 0);
       mode = 64; // 다음 화면으로 전환
       displayText = ""; // 질문 텍스트 초기화
       textIndex = 0;
     }
     if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 650 && mouseY - playScreen_y < 700) {
       applyChanges(question_list[53].answer[1].slice(1)); // 두 번째 선택지에 대한 변수 영향 적용
-      handleMouseClick(mode,1);
+      handleMouseClick(mode, 1);
       mode = 64; // 다음 화면으로 전환
       displayText = ""; // 질문 텍스트 초기화
       textIndex = 0;
     }
     if (mouseX - playScreen_x > 1000 && mouseX - playScreen_x < 1500 && mouseY - playScreen_y > 550 && mouseY - playScreen_y < 600) {
       applyChanges(question_list[53].answer[2].slice(1)); // 세 번째 선택지에 대한 변수 영향 적용
-      handleMouseClick(mode,2);
+      handleMouseClick(mode, 2);
       mode = 64; // 다음 화면으로 전환
       displayText = ""; // 질문 텍스트 초기화
       textIndex = 0;
     }
     if (mouseX - playScreen_x > 1000 && mouseX - playScreen_x < 1500 && mouseY - playScreen_y > 650 && mouseY - playScreen_y < 700) {
       applyChanges(question_list[53].answer[3].slice(1)); // 네 번째 선택지에 대한 변수 영향 적용
-      handleMouseClick(mode,3);
+      handleMouseClick(mode, 3);
       mode = 64; // 다음 화면으로 전환
       displayText = ""; // 질문 텍스트 초기화
       textIndex = 0;
