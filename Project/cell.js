@@ -129,7 +129,7 @@ class QuestionScreen {
         if ([ 2, 8, 9, 12, 13, 21, 22, 26, 32, 34, 42, 45, 47, 48, 50, 57].includes(this.index)) {
           fill(255, 0, 0);
           textSize(60);
-          text('랜덤',1800, 130); // 리퍼 이미지 왼쪽
+          text('랜덤',plsyscreen_2/2-200, 130); // 리퍼 이미지 왼쪽
           text('질문', playScreen_w/2+300, 130); // 리퍼 이미지 오른쪽
         }
       // 텍스트 그리기 (질문)
