@@ -1097,7 +1097,7 @@ function createQuestionScreen(index) {
 
 function mousePressed() {
   clickSound.play();
-  if (mode == 27 || mode == 28 || mode == 33 || mode == 34 || mode == 39 || mode == 40 || mode == 42 || mode == 45 || mode == 46 || mode == 47
+ /* if (mode == 27 || mode == 28 || mode == 33 || mode == 34 || mode == 39 || mode == 40 || mode == 42 || mode == 45 || mode == 46 || mode == 47
     || mode == 49 || mode == 50 || mode == 52 || mode == 54 || mode == 57 || mode == 62 || mode == 67 || mode == 69) {
     const index = mode - 10;
     if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 600 && mouseY - playScreen_y < 650) {
@@ -1115,7 +1115,7 @@ function mousePressed() {
     if (mouseX - playScreen_x > 1000 && mouseX - playScreen_x < 1500 && mouseY - playScreen_y > 600 && mouseY - playScreen_y < 650) {
       handleMouseClick(mode, 2);
     }
-  } else if (mode >= 10 && mode <= 69 && mode !== 63 && mode !== 16 && mode !==24 && mode !==56 && mode !== 27 && mode !== 28 && mode !== 33 && mode !== 34 && mode !== 39 && mode !== 40 && mode !== 42 && mode !== 45 && mode !== 46 && mode !== 47 &&
+  } else*/ if (mode >= 10 && mode <= 69 && mode !== 63 && mode !== 16 && mode !==24 && mode !==56 && mode !== 27 && mode !== 28 && mode !== 33 && mode !== 34 && mode !== 39 && mode !== 40 && mode !== 42 && mode !== 45 && mode !== 46 && mode !== 47 &&
     mode !== 49 && mode !== 50 && mode !== 52 && mode !== 54 && mode !== 57 && mode !== 62 && mode !== 67 && mode !== 69) {
     const index = mode - 10;
     if (mouseX - playScreen_x > 50 && mouseX - playScreen_x < 600 && mouseY - playScreen_y > 600 && mouseY - playScreen_y < 650) {
